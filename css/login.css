@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#link1
+ {
+    color:#6ca329;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 24px;
+    padding-left: 100px;
+}
+body{
+    background-image: url("./images/background\ 1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* #img1{
+    opacity: .5;
+} */
+
+#loginForm{
+    border: 2px solid lightgray;
+    border-radius: 30px;
+    text-align: center;
+    width: 500px;
+    height: 550px;
+    margin: 20px auto;
+    margin-top: 100px;
+    padding-top: 80px;
+    background-color: #fff;
+}
+#id1{
+    padding-top: 10px;
+    color:rgb(90, 89, 89);
+    font-size: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+.inputText{
+    border: 1px solid lightgray;
+    margin: 10px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+/*#check{
+  width: 30px;
+  height: 30px;
+} */
+#btn1{
+ width:400px;
+ height:50px ;
+ background-color: rgb(118, 207, 118);
+ /*rgba(67, 199, 111, 0.616);*/
+ text-align: center;
+ color: white;
+border:  0px solid rgb(118, 207, 118);
+border-radius: 20px;
+margin-bottom: 30px;
+margin-top: 20px;
+font-size: 15px;
+font-family:Arial, Helvetica, sans-serif;
+font-weight: bold;
+}
+#btn2{
+    width:400px;
+    height:50px ;
+    text-align: center;
+    color: rgb(105, 105, 105);
+    background-color: rgb(241, 238, 238);
+    border: 0px solid rgb(105, 105, 105);
+    border-radius: 20px;
+    font-size: 15px;
+font-family:Arial, Helvetica, sans-serif;
+font-weight: bold;
+}
+#btn1:hover{
+    background-color: rgb(72, 145, 72);
+}
+#btn1:hover , #btn2:hover{
+    cursor: pointer;
+}
+footer .btn-primary{
+    border: 0;
+  }

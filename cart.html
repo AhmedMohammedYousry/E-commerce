@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+      <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .navbar-dark .navbar-nav .nav-link.active, 
+        .navbar-dark .navbar-nav .show>.nav-link,
+        .navbar-dark .navbar-nav .nav-link:focus, 
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #6ca329;
+        }
+        .navbar-dark .navbar-nav .nav-link {
+            color: #FFF;
+            font-family: 'Bebas Neue', cursive;
+            font-size: 20px;
+        }
+        .navbar-dark .navbar-brand {
+            color: #6ca329;
+            font-family: 'Abril Fatface', cursive;
+            font-size: 24px;
+        }
+        .cart-noti{
+          position: relative;
+        }
+        .cart-noti .notification{
+          position: absolute;
+          width: 15px;
+          height: 20px;
+          background-color: red;
+          top: -3px;
+          border-radius: 5px;
+          color: white;
+          text-align: center;
+          line-height: 19px;
+          left: 30px;
+          display: none;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand"  href="index.html">
+        App Store
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html#cat">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-login" aria-current="page" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-register" href="register.html">Rgister</a>
+          </li>
+          <li class="nav-item">
+            <a style="display: none;" class="nav-link" id="nav-user" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a style="display: none;" class="nav-link" id="logout" href="#">Logout</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fav.html">Favorite</a>
+          </li>
+          <li class="nav-item cart-noti">
+            <a class="nav-link active" href="cart.html">
+                <i class="far fa-cart-plus"></i>
+            </a>
+            <span class="notification"></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+
+    <!-- cart items section -->
+    <section id="cart-items-section">
+        <div id="cartContent">
+            <br><br><br>
+            <h3>> MY CART (<span id="num_of_items">0</span> items)</h3>
+            <div id="items-container">
+                
+            </div>
+        </div>
+    
+        <div id="cartSide">
+            <h3>> PAYMENT</h3>
+    
+            <div class="cart-side-item">
+                <h3>Have Voucher Code?</h3>
+                <input type="text" placeholder="Add Code Here">
+                <button>APPLY</button>
+            </div>
+    
+            <div class="cart-side-item">
+                <h3>Price Details</h3>
+                <span><b>TOTAL</b></span>
+                <span style="float: right;"><b>EGP <span id="total_expenses"></span></b></span>
+            </div>
+    
+            <div>
+                <button style="width: 90%; background-color: rgb(243, 35, 8); margin: 15px;">CHECK OUT</button>
+            </div>
+    
+    
+        </div>
+
+    </section>
+    <script src="js/script.js"></script>
+  <script src="js/cart.js"></script>
+  </body>
+</html>

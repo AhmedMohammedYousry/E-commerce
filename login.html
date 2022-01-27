@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/login.css">
+  <title>App Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  
+  <div id="div1">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a id="link1" class="navbar-brand"  href="index.html">
+          App Store
+        </a>
+      </div>
+  </nav>
+    <form id="loginForm" action="index.html" method="get">
+      <img id="img1" src="./images/shop.jpeg" width="200px" height="100px"> <br>
+      <h1 id="id1"> Login to App Store </h1> <br>
+      <input type="text" id="email" name="name" class="inputText" placeholder="  Enter your E-mail address"
+      ><br>
+      <input type="password" id="pass" name="password" class="inputText" placeholder="  Enter your Password"
+      ><br>
+      <!-- <div class="g-recaptcha" data-sitekey="6Ldbdg0TAAAAAI7KAf72Q6uagbWzW
+        ecTeBWmrCpJ"></div> -->
+      <!--   <div class="g-recaptcha" style="margin-left:90px; margin-top: 20px" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5
+        sXnNbV5WaW"></div> -->
+      <input type="submit" id="btn1" value="Log in"> <br>
+      
+    </form>
+    <script>
+      var password = document.getElementById("pass");
+      var myForm = document.getElementById("loginForm");
+      var testresults;
+
+     // function SubmitForm(e) {
+       // e.preventDefault();
+        // if (password.value.length < "8") {
+        //   alert("Password must be at least 8 chars")
+        // } else {
+        //   console.log("valid Password")
+        // }
+        // //var regex= /^([a-z0-9]+\@[a-z]+\.[a-z]{2,3})+$/
+        // var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+        // if (regex.test(email.value)) {
+        //   console.log("Valid Mail");
+        // } else {
+        //   alert("Please input a valid email address!")
+        // }
+      //}
+      myForm.addEventListener('submit', checkFromMailPass)
+      
+      function checkFromMailPass(e){
+        e.preventDefault();
+        if(localStorage.getItem("register") === null){
+          alert("Ur Are Not Register Before");
+        }
+        var arr=localStorage.getItem("register").split("|");
+        if(arr[0] === email.value && arr[1] === password.value){
+          localStorage.setItem("login",arr[2]);
+          window.location="index.html";
+        }else{
+          alert("Ur Email Or Password Not Correct");
+        }
+      }
+    </script>
+    <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+  </div>
+  <footer class="bg-light text-center text-white">
+    <div class="container p-4 pb-0">
+      <section class="mb-4">
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #3b5998;"
+          href="#"
+          role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #55acee;"
+          href="#"
+          role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #dd4b39;"
+          href="#"
+          role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #ac2bac;"
+          href="#"
+          role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #0082ca;"
+          href="#"
+          role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+        <a
+          class="btn btn-primary btn-floating m-1"
+          style="background-color: #333333;"
+          href="#"
+          role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+    </div>
+    <div class="text-center p-3 text-white bg-dark" style="font-family: monospace;">
+      © 2020 Copyright App Store
+    </div>
+  </footer>
+
+</body>
+
+</html>
